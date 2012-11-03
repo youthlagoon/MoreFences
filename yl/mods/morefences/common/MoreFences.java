@@ -27,6 +27,8 @@ public class MoreFences {
 	public static Block moreFencesStoneGate;
 	public static Block moreFencesObsidian;
 	public static Block moreFencesObsidianGate;
+	public static Block moreFencesGlowStone;
+	public static Block moreFencesGlowStoneGate;
 	
 	
 	@Init
@@ -57,6 +59,9 @@ public class MoreFences {
 		moreFencesObsidian = new MakeMFBlock(3235, 37).setBlockName("ylMFObsidian").setHardness(3.0f).setResistance(8.0f);
 		moreFencesObsidianGate = new MakeMFGateBlock(3335, 37).setBlockName("ylMFObsidianGate").setHardness(3.0f).setResistance(8.0f);
 
+		moreFencesGlowStone = new MakeMFBlock(3236, 105).setBlockName("ylMFGlowStone").setHardness(3.0f).setResistance(8.0f).setLightValue(0.75f);
+		moreFencesGlowStoneGate = new MakeMFGateBlock(3336, 105).setBlockName("ylMFGLowStoneGate").setHardness(3.0f).setResistance(8.0f).setLightValue(0.75f);
+
 	}
 	
 	
@@ -76,6 +81,9 @@ public class MoreFences {
 		
 		LanguageRegistry.addName(moreFencesObsidian, "Obsidian Fence");
 		LanguageRegistry.addName(moreFencesObsidianGate, "Obsidian Gate");
+		
+		LanguageRegistry.addName(moreFencesObsidian, "Glow Stone Fence");
+		LanguageRegistry.addName(moreFencesObsidianGate, "Glow Stone Gate");
 	}
 
 	
@@ -95,6 +103,9 @@ public class MoreFences {
 	
 		GameRegistry.registerBlock(moreFencesObsidian);
 		GameRegistry.registerBlock(moreFencesObsidianGate);
+		
+		GameRegistry.registerBlock(moreFencesGlowStone);
+		GameRegistry.registerBlock(moreFencesGlowStoneGate);
 	}
 	
 	

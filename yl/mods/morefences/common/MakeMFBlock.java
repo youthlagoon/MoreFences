@@ -20,22 +20,42 @@ public class MakeMFBlock extends BlockFence {
 	}
 	
 	@Override
-	public boolean canConnectFenceTo(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
-	{	
-		super.canConnectFenceTo(par1IBlockAccess, par2, par3, par4);
+	public boolean canConnectFenceTo(IBlockAccess w, int x, int y, int z)
+    {
+        int bid = w.getBlockId(x, y, z);
+        int chkid = 0;
         
-		int var5 = par1IBlockAccess.getBlockId(par2, par3, par4);
+        switch(this.blockID){
+        case 3231: chkid = 3331; break;
+        case 3232: chkid = 3332; break;
+        case 3233: chkid = 3333; break;
+        case 3234: chkid = 3334; break;
+        case 3235: chkid = 3335; break;
+        //case 3236: chkid = 3336; break;
+        //case 3237: chkid = 3337; break;
+        
+        default : chkid = 3331;
+        			
+        
+        
+        
+        }
 
-        if (var5 != this.blockID && var5 != Block.fenceGate.blockID)
+        if (bid != this.blockID && bid != chkid)
         {
-            Block var6 = Block.blocksList[var5];
+            Block var6 = Block.blocksList[bid];
             return var6 != null && var6.blockMaterial.isOpaque() && var6.renderAsNormalBlock() ? var6.blockMaterial != Material.pumpkin : false;
         }
         else
         {
-            return true;
+        	return true;
         }
     }
+	
+	
+	
+	
+	
 	
 	
 
