@@ -26,29 +26,28 @@ public class MakeMFBlock extends BlockFence {
         int chkid = 0;
         
         switch(this.blockID){
+        
         case 3231: chkid = 3331; break;
         case 3232: chkid = 3332; break;
         case 3233: chkid = 3333; break;
         case 3234: chkid = 3334; break;
         case 3235: chkid = 3335; break;
-        //case 3236: chkid = 3336; break;
-        //case 3237: chkid = 3337; break;
+        case 3236: chkid = 3336; break;
+        case 3237: chkid = 3337; break;
         
         default : chkid = 3331;
-        			
-        
-        
-        
         }
-
-        if (bid != this.blockID && bid != chkid)
-        {
+        
+        
+        if (bid != this.blockID && bid != chkid){
+        	
             Block var6 = Block.blocksList[bid];
             return var6 != null && var6.blockMaterial.isOpaque() && var6.renderAsNormalBlock() ? var6.blockMaterial != Material.pumpkin : false;
-        }
-        else
-        {
+            
+        } else {
+        	
         	return true;
+        	
         }
     }
 	
